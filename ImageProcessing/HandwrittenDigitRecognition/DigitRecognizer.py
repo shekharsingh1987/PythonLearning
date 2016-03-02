@@ -9,25 +9,18 @@ from matplotlib import pyplot as plt
 clf = joblib.load("digits_cls.pkl")
 
 # Read the input image 
-im = cv2.imread("D:\GITRepository\ImageProcessing\HandwrittenDigitRecognition\Images\SampleImage.jpg")
+im = cv2.imread("D:\GITRepository\ImageProcessing\HandwrittenDigitRecognition\Images\photo_2.jpg")
 
 # Convert to grayscale and apply Gaussian filtering
 im_gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
-
 im_gray = cv2.GaussianBlur(im_gray, (5, 5), 0)
 
-#cv2.imshow("Resulting Image with Rectangular ROIs", im_gray)
-#cv2.waitKey()
 
-# Threshold the image
+# Threshold the image(arg1=image source,arg2=thresold value(Between 0 till 255),arg3=value greater than thresold,arg4=type of thresold) 
 ret, im_th = cv2.threshold(im_gray, 90, 255, cv2.THRESH_BINARY_INV)
-
-plt.imshow(im_th)
 
 # Find contours in the image
 image, ctrs, hier = cv2.findContours(im_th.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
-print ctrs
 
 # Get rectangles contains each contour
 rects = [cv2.boundingRect(ctr) for ctr in ctrs]
@@ -48,7 +41,9 @@ for rect in rects:
     # Calculate the HOG features
     roi_hog_fd = hog(roi, orientations=9, pixels_per_cell=(14, 14), cells_per_block=(1, 1), visualise=False)
     nbr = clf.predict(np.array([roi_hog_fd], 'float64'))
-    print nbr[0],
+    print rect
+    print '-------------'
+    print str(int(nbr[0]))
     cv2.putText(im, str(int(nbr[0])), (rect[0], rect[1]),cv2.FONT_HERSHEY_DUPLEX, 2, (0, 255, 255), 3)
 
 cv2.imshow("Resulting Image with Rectangular ROIs", im)
