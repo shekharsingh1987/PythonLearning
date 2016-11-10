@@ -1,0 +1,8 @@
+D:\KPMG_Showcase\Library Reusable\Implementation\bin\Debug\Implementation.exe.config
+D:\KPMG_Showcase\Library Reusable\Implementation\bin\Debug\Implementation.exe
+D:\KPMG_Showcase\Library Reusable\Implementation\bin\Debug\Implementation.pdb
+D:\KPMG_Showcase\Library Reusable\Implementation\bin\Debug\Orion.CodeLibrary.FileRestore.dll
+D:\KPMG_Showcase\Library Reusable\Implementation\obj\Debug\Implementation.csprojResolveAssemblyReference.cache
+D:\KPMG_Showcase\Library Reusable\Implementation\obj\Debug\Implementation.exe
+D:\KPMG_Showcase\Library Reusable\Implementation\obj\Debug\Implementation.pdb
+D:\KPMG_Showcase\Library Reusable\Implementation\bin\Debug\Orion.CodeLibrary.FileRestore.pdb

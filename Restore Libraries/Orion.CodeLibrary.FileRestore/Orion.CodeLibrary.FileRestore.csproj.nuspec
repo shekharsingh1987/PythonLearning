@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Orion.CodeLibrary.FileRestore.dll</id>
+    <version>1.0.0</version>
+    <authors>ShekharK</authors>
+    <owners>ShekharK</owners>
+    <licenseUrl>http://10.60.3.16/nuget/</licenseUrl>
+    <!--<projectUrl>http://10.60.3.16/nuget/</projectUrl>-->
+    <!--<iconUrl></iconUrl>-->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This package is meant for Restore purpose of files placed in directory to another.</description>
+    <releaseNotes>Initial commit.</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>Restore FileRestore FileCopy</tags>
+    <dependencies>
+      <dependency id="SampleDependency" version="1.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- Add a readme -->
+    <file src="readme.txt" target="" />
+  </files>
+</package>
